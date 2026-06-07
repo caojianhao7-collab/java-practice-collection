@@ -6,12 +6,55 @@
  * Time: 10:15
  */
 public class Test {
+//    水仙花数
+//
+//    求出0～n之间的所有“水仙花数”并输出。(“水仙花数”是指一个三位数，其各位数字的立方和确好等于该数本身，
+//    如；153＝1^3＋5^3＋3^3，则153是一个“水仙花数“。）
+
+    public static void main(String[] args) {
+        int n=407;
+        for(int i=100;i<=n;i++){
+            int sum=0;
+            int tmp=i;
+            while(tmp!=0){
+                sum+=(tmp%10)*(tmp%10)*(tmp%10);
+                tmp/=10;
+            }
+            if(sum==i){
+                System.out.println(i);
+            }
+
+        }
+    }
+
+//    求2个整数的最大公约数
+//
+//    给定两个数，求这两个数的最大公约数
+//
+//    例如：
+//
+//    输入：20 40
+//
+//    输出：20
+
+    public static void main5(String[] args) {
+        int a=20;
+        int b=40;
+        int min=a<b?a:b;
+        for(;min>=1;min--){
+            if(a%min==0&&b%min==0){
+                System.out.println(min);
+                break;
+            }
+        }
+
+    }
 
 //    输出闰年
 //
 //    输出 1000 - 2000 之间所有的闰年
 
-    public static void main(String[] args) {
+    public static void main4(String[] args) {
         for(int i=1000;i<=2000;i+=4){
             if(i%400==0){
                 System.out.println(i);
