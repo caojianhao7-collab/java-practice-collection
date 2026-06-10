@@ -8,11 +8,31 @@ import java.util.Scanner;
  * Time: 11:42
  */
 public class Test {
+//    求最大值方法的重载
+//
+//    在同一个类中定义多个方法：要求不仅可以求2个整数的最大值，还可以求3个小数的最大值？
+
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 2;
+        int c = 3;
+        System.out.println(max(c,b));
+        System.out.println(max(a,b,c));
+    }
+    public static int max(int x,int y){
+        return x>y?x:y;
+    }
+
+    public static int max(int x,int y,int z){
+        int tmp = x>y?x:y;
+        return tmp>z?tmp:z;
+    }
+
 //    求阶乘和
 //
 //    求1！+2！+3！+4！+........+n!的和
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
