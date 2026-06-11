@@ -8,11 +8,33 @@ import java.util.Scanner;
  * Time: 11:42
  */
 public class Test {
+//    斐波那契数列
+//
+//    求斐波那契数列的第n项。(迭代实现)
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        for (int i = 3; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        if(n == 2){
+            c = 1;
+        }
+        System.out.println(c);
+
+    }
+
+
 //    求最大值方法的重载
 //
 //    在同一个类中定义多个方法：要求不仅可以求2个整数的最大值，还可以求3个小数的最大值？
 
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         int a = 5;
         int b = 2;
         int c = 3;
