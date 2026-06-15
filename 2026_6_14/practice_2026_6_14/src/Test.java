@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -16,21 +19,23 @@ public class Test {
 //    调整后可能是：[1, 5, 3, 4, 2, 6]
 
     public static void main(String[] args) {
-        int[] arr ={1,2,3,4,5,6,7,8,9};
-        int sz = arr.length;
-        while(sz != 0){
-            if(arr[0] % 2 != 0){
-                //尾插
-                int tmp = arr[0];
-                for(int j = 0;;j++){
-                    arr[j] = arr[j+1];
-                }
-
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] arrRet = new int[arr.length];
+        int left = 0;
+        int right = arr.length-1;
+        for (int i = 0;i < arr.length;i++){
+            if(arr[i] % 2 != 0){
+                arrRet[left] = arr[i];
+                left++;
+            }else{
+                arrRet[right] = arr[i];
+                right--;
             }
-            sz--;
         }
-    }
 
+
+        System.out.println(Arrays.toString(arrRet));
+    }
 //    改变原有数组元素的值
 //
 //    实现一个方法 transform, 以数组为参数, 循环将数组中的每个元素 乘以 2 , 并设置到对应的数组元素上. 例如 原数组为 {1, 2, 3}, 修改之后为 {2, 4, 6}
