@@ -10,12 +10,34 @@ import java.util.Arrays;
  */
 public class Test {
 
+//    递归求解汉诺塔问题
+//
+//    递归求解汉诺塔问题
+
+    public static void main(String[] args) {
+        hanNio(5,'A','B','C');
+    }
+
+    public static void hanNio(int n,char a,char b,char c){
+        if(n == 1){
+            move(a,c);
+            return;
+        }
+        hanNio(n-1,a,c,b);
+        move(a,c);
+        hanNio(n-1,b,a,c);
+    }
+
+    public static void move(char pos1,char pos2){
+        System.out.println(pos1+"->"+pos2);
+    }
+
 //    递归求和
 //
 //    递归求 1 + 2 + 3 + ... + 10
 
-    public static void main(String[] args) {
-
+    public static void main9(String[] args) {
+        System.out.println(sum(10));
     }
 
     public static int sum(int n){
