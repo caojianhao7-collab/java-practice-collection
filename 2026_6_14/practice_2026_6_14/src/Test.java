@@ -10,10 +10,49 @@ import java.util.Arrays;
  */
 public class Test {
 
-
+//    递归求和
+//
+//    递归求 1 + 2 + 3 + ... + 10
 
     public static void main(String[] args) {
 
+    }
+
+    public static int sum(int n){
+        if(n == 1){
+            return 1;
+        }
+        return n+sum(n-1);
+    }
+
+
+//    二分查找
+//
+//    给定一个有序整型数组, 实现二分查找
+
+    public static void main8(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7,8,9};
+        int search = 8;
+        int ret = searchInt(arr,search);
+        System.out.println(ret);
+    }
+
+    public static int searchInt(int[] arr,int search){
+        int left = 0;
+        int right = arr.length - 1;
+        while(left <= right){
+            int middle = (left + right) / 2;
+            if(arr[middle] == search){
+                return middle;
+            } else if (arr[middle] > search) {
+                right = middle - 1;
+            } else if (arr[middle] < search) {
+                left = middle + 1;
+            }
+
+        }
+
+        return -1;
     }
 
 //    存在连续三个奇数的数组
