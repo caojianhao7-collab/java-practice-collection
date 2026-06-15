@@ -10,6 +10,42 @@ import java.util.Arrays;
  */
 public class Test {
 
+
+
+    public static void main(String[] args) {
+
+    }
+
+//    存在连续三个奇数的数组
+//
+//    给你一个整数数组 arr，请你判断数组中是否存在连续三个元素都是奇数的情况：如果存在，请返回 true ；否则，返回 false 。
+//
+//    示例 1：
+//    输入：arr = [2,6,4,1]
+//    输出：false
+//    解释：不存在连续三个元素都是奇数的情况。
+//    示例 2：
+//    输入：arr = [1,2,34,3,4,5,7,23,12]
+//    输出：true
+//    解释：存在连续三个元素都是奇数的情况，即 [5,7,23] 。
+
+    public static void main7(String[] args) {
+        int[] arr = {1,2,34,3,4,5,7,23,12};
+        boolean flag = threeJi(arr);
+        System.out.println(flag);
+    }
+
+    public static boolean threeJi(int[] arr) {
+        for (int i = 0; i < arr.length - 2; i++) {
+            if (arr[i] % 2 != 0 && arr[i + 1] % 2 != 0 && arr[i + 2] % 2 != 0) {
+                return true;
+            }
+        }
+
+
+        return false;
+    }
+
 //    多数元素
 //
 //    给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
@@ -25,7 +61,7 @@ public class Test {
 //    输入：[2,2,1,1,1,2,2]
 //    输出：2
 
-    public static void main(String[] args) {
+    public static void main6(String[] args) {
         int[] arr = {2,2,1,1,1,2,2};
         moreNum(arr,arr.length);
     }
