@@ -10,13 +10,28 @@ import java.util.Arrays;
  */
 public class Test {
 
+//    返回的数字之和
+//
+//    写一个递归方法，输入一个非负整数，返回组成它的数字之和
+
+    public static void main(String[] args) {
+        System.out.println(sumNum(12345));
+    }
+
+    public static int sumNum(int n){
+        if(n <= 9){
+            return n;
+        }
+        return (n % 10)+sumNum(n / 10);
+    }
+
     //测试提交
 
 //    递归求解汉诺塔问题
 //
 //    递归求解汉诺塔问题
 
-    public static void main(String[] args) {
+    public static void main10(String[] args) {
         hanNio(5,'A','B','C');
     }
 
