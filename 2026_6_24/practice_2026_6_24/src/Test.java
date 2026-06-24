@@ -9,6 +9,28 @@ import java.util.Arrays;
  */
 public class Test {
 
+//    多数元素
+//
+//    给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
+//
+//    你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+//
+//
+//
+//    示例 1：
+//    输入：[3,2,3]
+//    输出：3
+//
+//    示例 2：
+//    输入：[2,2,1,1,1,2,2]
+//    输出：2
+
+    public static void main(String[] args) {
+        int[] arr = {3,2,3};
+        Arrays.sort(arr);
+        System.out.println(arr[arr.length / 2]);
+    }
+
 //    只出现一次的数字
 //
 //    给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
@@ -22,7 +44,7 @@ public class Test {
 //    输入: [4,1,2,1,2]
 //    输出: 4
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int[] arr = {2,2,1};
         int ret = numOnce(arr);
         System.out.println(ret);
