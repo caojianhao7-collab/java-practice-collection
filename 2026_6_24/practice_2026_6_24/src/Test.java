@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -21,10 +23,10 @@ public class Test {
         int left = 0;
         int right = arr.length - 1;
         while(left < right){
-            while (left % 2 != 0 && left < right){
+            while (arr[left] % 2 != 0 && left < right){
                 left++;
             }
-            while(right % 2 == 0 && left < right){
+            while(arr[right] % 2 == 0 && left < right){
                 right--;
             }
             int tmp = arr[left];
@@ -37,7 +39,7 @@ public class Test {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
         exchange(arr);
-        System.out.println(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }
