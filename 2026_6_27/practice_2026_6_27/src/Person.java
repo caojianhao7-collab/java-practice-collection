@@ -22,7 +22,12 @@ public class Person {
         this.age = 18;
     }
 
-    public String toString(){
-        return this.name + " " + this.age;
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
+
 }
