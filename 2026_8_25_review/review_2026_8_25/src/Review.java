@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -9,6 +10,12 @@ import java.util.Scanner;
 public class Review {
 
     public static void main(String[] args) {
+        Random a = new Random();
+        int num = a.nextInt(100);
+        System.out.println(num);
+    }
+
+    public static void main3(String[] args) {
         Scanner sc = new Scanner(System.in);
         int sum = 0;
         while(sc.hasNextInt()){
