@@ -9,9 +9,16 @@ package test5;
  */
 public class Dog extends Animal{
 
+    public Dog(){
+        super("凯荣",18);
+    }
+
     @Override
-    public Dog eat() {
+    public void eat() {
         System.out.println(super.name+"在吃狗粮");
-        return null;
+    }
+
+    public void bark(){
+        System.out.println(this.name+"汪汪叫");
     }
 }
