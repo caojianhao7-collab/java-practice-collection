@@ -22,6 +22,7 @@ public class Review {
             int a = sc.nextInt();
             sum += a;
         }
+        sc.close();
         System.out.println(sum);
     }
 

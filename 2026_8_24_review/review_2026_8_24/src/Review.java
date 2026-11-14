@@ -8,6 +8,12 @@
 public class Review {
 
     public static void main(String[] args) {
+        System.out.println(10 % 3);
+        System.out.println(-10 % 3);
+        System.out.println(10 % -3);
+    }
+
+    public static void main6(String[] args) {
         String a = "100";
         int num = Integer.parseInt(a);
     }
